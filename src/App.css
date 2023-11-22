@@ -83,3 +83,9 @@ body {
     line-height: 1.6;
     padding-top: 20px;
 }
+
+.authInterface {
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(#1c1e29, #424242)
+}

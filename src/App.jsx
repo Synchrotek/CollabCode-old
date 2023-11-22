@@ -3,6 +3,7 @@ import { Toaster } from 'react-hot-toast'
 import './App.css'
 import Home from './pages/Home'
 import EditorPage from './pages/EditorPage'
+import Auth from './pages/Auth/Auth'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       </div>
       <Routes>
         <Route path='/' Component={Home} />
+        <Route path='/auth' Component={Auth} />
         <Route path='/editor/:roomId' Component={EditorPage} />
       </Routes>
     </>

@@ -7,11 +7,13 @@ import connectDB from './config/db.js'
 import userRouter from './routes/userRoutes.js'
 import notFound from './routes/errMiddleware/notFound.js';
 import errorHandler from './routes/errMiddleware/errorHandler.js';
+import cors from 'cors';
 
 dotenv.config();
 connectDB();
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 const server = createServer(app);

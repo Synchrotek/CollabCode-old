@@ -2,6 +2,9 @@ import React from 'react'
 import { ChakraProvider, Container, Box, Text, Tabs, TabList, Tab, TabPanel, TabPanels } from '@chakra-ui/react'
 import Login from '../components/Login'
 import Signup from '../components/Signup'
+import axios from 'axios'
+
+axios.defaults.baseURL = import.meta.env.VITE_ENDPOINT;
 
 const Auth = () => {
     return (<div className='authInterface'><ChakraProvider>

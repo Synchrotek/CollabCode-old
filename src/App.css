@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #1c1e29;
+}
+
+.mainWrap {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    height: 100vh;
+}
+
+.aside {
+    /* min-width: 30px; */
+    background: #1c1e29;
+    padding: 16px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.asideInner {
+    flex: 1;
+}
+
+.clientList {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+.userName {
+    margin-top: 10px;
+}
+
+.logoImg {
+    width: 200px;
+    margin: 5px 0;
+    border-bottom: 1px solid #424242;
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.leaveBtn {
+    width: 100%;
+    margin-top: 20px;
+    background: #4aed88;
+}
+
+.leaveBtn:hover {
+    background: #2b824c;
+}
+
+.CodeMirror {
+    min-height: calc(100vh - 10px);
+    font-size: 20px;
+    line-height: 1.6;
+    padding-top: 20px;
+}

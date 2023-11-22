@@ -27,6 +27,13 @@ const Home = () => {
       state: { username, },
     });
   }
+  const logoutHandler = () => {
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    if (userInfo) {
+      localStorage.removeItem("userInfo");
+      navigate('/auth');
+    }
+  }
 
 
   return (
@@ -51,6 +58,9 @@ const Home = () => {
           If you don't have an invite then create &nbsp;
           <a onClick={createNewRoom} className='createNewBtn'>new room</a>
         </div>
+        <button className='btn joinBtn'
+          onClick={logoutHandler}
+        >Log Out</button>
       </div>
       <footer>
         <h4>Built with 💛 by <a href='http://github.com'>ByteAstro</a></h4>

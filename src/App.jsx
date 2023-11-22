@@ -4,6 +4,7 @@ import './App.css'
 import Home from './pages/Home'
 import EditorPage from './pages/EditorPage'
 import Auth from './pages/Auth'
+import Protected from './Protected'
 
 function App() {
   return (
@@ -17,9 +18,9 @@ function App() {
         ></Toaster>
       </div>
       <Routes>
-        <Route path='/' Component={Home} />
-        <Route path='/auth' Component={Auth} />
-        <Route path='/editor/:roomId' Component={EditorPage} />
+        <Route path='/' element={<Protected Component={Home} />} />
+        <Route path='/auth' element={<Auth />} />
+        <Route path='/editor/:roomId' element={<Protected Component={EditorPage} />} />
       </Routes>
     </>
   )

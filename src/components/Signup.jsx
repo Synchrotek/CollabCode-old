@@ -42,7 +42,7 @@ const Signup = () => {
             toast.success('Registration Successful');
             localStorage.setItem('userInfo', JSON.stringify(data))
             setLoading(false);
-            navigate('/login')
+            navigate('/')
         } catch (error) {
             toast.error('Error ocuured in registration.');
             setLoading(false);

@@ -30,6 +30,7 @@ const Home = () => {
   const logoutHandler = () => {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
     if (userInfo) {
+      toast.success('Logout Successful');
       localStorage.removeItem("userInfo");
       navigate('/auth');
     }

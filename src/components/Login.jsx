@@ -31,7 +31,7 @@ const Login = () => {
                 '/api/user/login',
                 { email, password }
             )
-            toast.success('Registration Successful');
+            toast.success('Login Successful');
             localStorage.setItem('userInfo', JSON.stringify(data))
             setLoading(false);
             navigate('/')

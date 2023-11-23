@@ -3,8 +3,12 @@ import Client from '../components/Client';
 import Editor from '../components/Editor';
 import { initSocket } from '../config/socket';
 import ACTIONS from '../../Actions';
-import { useLocation, useNavigate, useParams, Navigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams, Navigate, Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { IconContext } from 'react-icons';
+import TodoApp from '../components/TodoApp'
+import { AiOutlineClose } from "react-icons/ai";
+import './EditorPage.css'
 
 const EditorPage = () => {
     const socketRef = useRef(null);
@@ -13,6 +17,8 @@ const EditorPage = () => {
     const reactNavigator = useNavigate();
     const { roomId } = useParams();
     const [clients, setClients] = useState([]);
+    const [sidebar, setSidebar] = useState(false);
+    const showSidebar = () => setSidebar(!sidebar);
 
     useEffect(() => {
         const init = async () => {
@@ -96,9 +102,26 @@ const EditorPage = () => {
                         ))}
                     </div>
                 </div>
-                <button className='btn leaveBtn'
-                    onClick={copyRoomIdHandler}
-                >To do</button>
+
+
+                <IconContext.Provider value={{ color: '#fff' }}>
+                    <button className='btn leaveBtn'
+                        onClick={showSidebar}>TO DO</button>
+                    <div className="navbar">
+                        <div className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                            <div className='nav-menu-items'>
+                                <div className="navbar-toggle">
+                                    <Link className='menu-bar-close'>
+                                        <AiOutlineClose onClick={showSidebar} />
+                                    </Link>
+                                </div>
+                                <TodoApp />
+                            </div>
+                        </div>
+                    </div>
+                </IconContext.Provider>
+
+
                 <button className='btn coyBtn'
                     onClick={copyRoomIdHandler}
                 >Copy Room ID</button>

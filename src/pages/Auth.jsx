@@ -3,14 +3,12 @@ import { ChakraProvider, Container, Box, Text, Tabs, TabList, Tab, TabPanel, Tab
 import Login from '../components/Login'
 import Signup from '../components/Signup'
 import axios from 'axios'
-import Navbar from '../components/Navbar'
 
 axios.defaults.baseURL = import.meta.env.VITE_ENDPOINT;
 
 const Auth = () => {
     return (<>
         <div className='authInterface'><ChakraProvider>
-            <Navbar />
             <Container maxW='xl' centerContent>
                 <Box
                     d='flex' justifyContent='center' p={3} bg={'black'}

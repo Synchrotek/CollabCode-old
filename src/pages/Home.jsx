@@ -6,10 +6,12 @@ import { useNavigate } from 'react-router-dom'
 
 // Functional component `````````````````````````````````````````````````````````
 const Home = () => {
+  const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+  // console.log(userInfo.name);
 
   const navigate = useNavigate();
   const [roomId, setRoomId] = useState('');
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState(userInfo.name);
 
   const createNewRoom = (e) => {
     e.preventDefault();

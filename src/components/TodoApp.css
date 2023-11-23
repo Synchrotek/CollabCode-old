@@ -6,12 +6,13 @@
 }
 
 .header {
-    background-color: #333;
+    background-color: #f11010;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 13px;
     border-radius: 5px;
     margin-bottom: 20px;
+    font-size: 0.6rem;
 }
 
 .new-todo {
@@ -70,6 +71,7 @@
 
 /* Style the todo list */
 #todo-list {
+    color: black;
     font-size: 2rem;
     /* font-weight: 700; */
     list-style: none;

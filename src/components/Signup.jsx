@@ -44,7 +44,8 @@ const Signup = () => {
             setLoading(false);
             navigate('/')
         } catch (error) {
-            toast.error('Error ocuured in registration.');
+            toast.error(error.response.data.message);
+            console.log(error.response.data);
             setLoading(false);
         }
     }

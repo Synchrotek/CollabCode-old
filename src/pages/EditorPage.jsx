@@ -96,6 +96,9 @@ const EditorPage = () => {
                         ))}
                     </div>
                 </div>
+                <button className='btn leaveBtn'
+                    onClick={copyRoomIdHandler}
+                >To do</button>
                 <button className='btn coyBtn'
                     onClick={copyRoomIdHandler}
                 >Copy Room ID</button>

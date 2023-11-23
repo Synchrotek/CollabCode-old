@@ -29,7 +29,7 @@ const Login = () => {
             }
             const { data } = await axios.post(
                 '/api/user/login',
-                { email, password }
+                { email, password }, config
             )
             toast.success('Login Successful');
             localStorage.setItem('userInfo', JSON.stringify(data))

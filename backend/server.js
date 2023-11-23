@@ -69,6 +69,7 @@ io.on('connection', (socket) => {
                 username: userSocketMap[socket.id],
             })
         })
+        socket.emit('selfDisconnected');
         delete userSocketMap[socket.id];
         socket.leave();
     })

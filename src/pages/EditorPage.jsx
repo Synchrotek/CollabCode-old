@@ -57,6 +57,10 @@ const EditorPage = () => {
                     return prev.filter(client => client.socketId !== socketId)
                 })
             })
+            socketRef.current.on('selfDisconnected', () => {
+                localStorage.removeItem("userInfo");
+                alert('See u later');
+            })
         }
         init();
 

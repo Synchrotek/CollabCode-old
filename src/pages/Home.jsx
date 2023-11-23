@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { v4 as uuidV4 } from 'uuid'
 import toast from 'react-hot-toast'
 import './Home.css'
@@ -6,12 +6,14 @@ import { useNavigate } from 'react-router-dom'
 
 // Functional component `````````````````````````````````````````````````````````
 const Home = () => {
-  const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-  // console.log(userInfo.name);
-
   const navigate = useNavigate();
   const [roomId, setRoomId] = useState('');
-  const [username, setUsername] = useState(userInfo.name);
+  const [username, setUsername] = useState('');
+  const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+
+  useEffect(() => {
+    if (userInfo) setUsername(userInfo.name);
+  }, [])
 
   const createNewRoom = (e) => {
     e.preventDefault();

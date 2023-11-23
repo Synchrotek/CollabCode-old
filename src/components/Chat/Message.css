@@ -1,0 +1,62 @@
+.messageBox {
+    max-width: 80%;
+    padding: 1vmax;
+    margin: 1vmax;
+    word-wrap: break-word;
+    border-radius: 1.5vmax;
+    display: inline-block;
+}
+
+.left {
+    clear: both;
+    float: left;
+    font-weight: 500;
+    background-color: #392d4f;
+    color: #fff;
+    border-bottom-left-radius: 0.05vmax;
+}
+
+.right {
+    clear: both;
+    float: right;
+    background-color: crimson;
+    color: white;
+    border-bottom-right-radius: 0.05vmax;
+}
+
+.center {
+    float: left;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5vmax;
+    margin: 0.8vmax 30%;
+    word-wrap: break-word;
+    border-radius: 2vmax;
+    font-size: 1.2vmax;
+    font-weight: 800;
+    background-color: #ce0000;
+    color: #fff;
+}
+
+.userName {
+    font-family: 'Merriweather', serif;
+    color: #FFFFDD;
+}
+
+.userNameYou {
+    font-family: 'Merriweather', serif;
+    color: #FFFFDD;
+}
+
+@media (max-aspect-ratio: 7/10) {
+
+    .center {
+        width: 80%;
+        padding: 0.8vmax;
+        margin: 1vmax 10%;
+        font-size: 1.7vmax;
+    }
+
+}

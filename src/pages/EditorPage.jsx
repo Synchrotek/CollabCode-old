@@ -9,6 +9,7 @@ import { IconContext } from 'react-icons';
 import TodoApp from '../components/TodoApp'
 import { AiOutlineClose } from "react-icons/ai";
 import './EditorPage.css'
+import Chat from '../components/Chat/Chat';
 
 const EditorPage = () => {
     const socketRef = useRef(null);
@@ -17,8 +18,10 @@ const EditorPage = () => {
     const reactNavigator = useNavigate();
     const { roomId } = useParams();
     const [clients, setClients] = useState([]);
-    const [sidebar, setSidebar] = useState(false);
-    const showSidebar = () => setSidebar(!sidebar);
+    const [sidebarTodo, setSidebarTodo] = useState(false);
+    const [sidebarChat, setSidebarChat] = useState(false);
+    const showSidebarTodo = () => setSidebarTodo(!sidebarTodo);
+    const showSidebarChat = () => setSidebarChat(!sidebarChat);
 
     useEffect(() => {
         const init = async () => {
@@ -107,16 +110,32 @@ const EditorPage = () => {
                     </div>
                 </div>
 
+                <IconContext.Provider value={{ color: '#fff' }}>
+                    <button className='btn leaveBtn'
+                        onClick={showSidebarChat}>Chat</button>
+                    <div className="navbarChat">
+                        <div className={sidebarChat ? 'nav-menu active' : 'nav-menu'}>
+                            <div className='nav-menu-items-chats'>
+                                <div className="navbar-toggle">
+                                    <Link className='menu-bar-close'>
+                                        <AiOutlineClose onClick={showSidebarChat} />
+                                    </Link>
+                                </div>
+                                <Chat />
+                            </div>
+                        </div>
+                    </div>
+                </IconContext.Provider>
 
                 <IconContext.Provider value={{ color: '#fff' }}>
                     <button className='btn leaveBtn'
-                        onClick={showSidebar}>TO DO</button>
+                        onClick={showSidebarTodo}>TO DO</button>
                     <div className="navbar">
-                        <div className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                        <div className={sidebarTodo ? 'nav-menu active' : 'nav-menu'}>
                             <div className='nav-menu-items'>
                                 <div className="navbar-toggle">
                                     <Link className='menu-bar-close'>
-                                        <AiOutlineClose onClick={showSidebar} />
+                                        <AiOutlineClose onClick={showSidebarTodo} />
                                     </Link>
                                 </div>
                                 <TodoApp />

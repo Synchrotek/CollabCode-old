@@ -61,6 +61,19 @@ io.on('connection', (socket) => {
         io.to(socketId).emit(ACTIONS.CODE_CHANGE, { code });
     })
 
+    // Chat socket -----------------------------------------------------------------------------------------
+    socket.on('joined', ({ user }) => {
+        userSocketMap[socket.id] = user;
+        console.log(`${user} has Joined`) //delete
+        socket.emit('welcome', { user: `${user}`, message: `welcome to the chat` });
+        socket.broadcast.emit('userJoined', { user: `${user}`, message: ` has joined`, id: `${socket.id}` })
+    });
+
+    socket.on('message', ({ message, id }) => {
+        io.emit('sendMessage', { user: userSocketMap[id], message, id });
+    });
+
+    // Diconnecting Event -----------------------------------------------------------------------------------
     socket.on('disconnecting', () => {
         const rooms = [...socket.rooms];
         rooms.forEach((roomId) => {
@@ -70,6 +83,8 @@ io.on('connection', (socket) => {
             })
         })
         socket.emit('selfDisconnected');
+        socket.broadcast.emit('leave', { user: `${userSocketMap[socket.id]}`, message: ` has left`, id: `${socket.id}` });
+        console.log(`${userSocketMap[socket.id]} left the Chat`); //delete
         delete userSocketMap[socket.id];
         socket.leave();
     })

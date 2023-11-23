@@ -3,6 +3,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 5px;
+    z-index: 225;
 }
 
 .header {

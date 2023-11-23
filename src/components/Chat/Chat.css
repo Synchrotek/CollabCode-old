@@ -1,0 +1,121 @@
+.chatPage {
+    background-color: rgb(31, 29, 29);
+    width: 100%;
+    height: 100vh;
+}
+
+.chatContainer {
+    /* background-color: #fff; */
+    height: 84%;
+    width: 100%;
+}
+
+.header {
+    background-color: crimson;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.7vmax;
+}
+
+.header>h2 {
+    color: #fff;
+}
+
+.header>a {
+    color: #fff;
+    transition: all 0.3s;
+    transform: scale(1.5);
+
+}
+
+.header>a:hover {
+    transform: scale(2.2) rotate(90deg);
+}
+
+.chatBox {
+    background: linear-gradient(rgb(216, 41, 76), #FF6C22);
+    border: 0.2vmax solid black;
+    border-bottom-color: transparent;
+    height: 70%;
+    overflow-y: auto;
+}
+
+.chatBox::-webkit-scrollbar {
+    display: none;
+}
+
+.inputBox {
+    border: 0.2vmax solid black;
+    height: 15%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#chatInput {
+    width: 80%;
+    border: none;
+    padding: 2vmax;
+    background-color: #DA0C81;
+    color: #fff;
+    outline: none;
+    height: 100%;
+    font-size: 2vmax;
+    resize: none;
+}
+
+#chatInput::-webkit-scrollbar {
+    display: none;
+}
+
+
+.sendBtn {
+    background-color: crimson;
+    color: #fff;
+    border: none;
+    width: 20%;
+    margin: 0 3.5px;
+    height: 100%;
+    font-size: 1.7vmax;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sendBtnI {
+    transform: rotate(40deg) scale(1.1);
+    transition: all 0.3s;
+}
+
+.sendBtn:hover {
+    background-color: rgb(167, 2, 35);
+}
+
+.sendBtn:hover .sendBtnI {
+    transform: rotate(0deg) scale(1.5);
+}
+
+@media (max-aspect-ratio: 7/10) {
+
+    .chatContainer {
+        background-color: #fff;
+        height: 98vh;
+        width: 97vw;
+    }
+
+    .header {
+        padding-right: 3vmax;
+    }
+
+    .inputBox {
+        border-top: 0.3vmax solid black;
+        height: 15%;
+        display: flex;
+    }
+
+    .header>a:hover {
+        transform: scale(2.2);
+    }
+
+}

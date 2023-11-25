@@ -1,4 +1,36 @@
-## CollabCode
-- A web-code editor that uses socket-io for real-time collaboration.
+### code-collab
+A collaborative coding web application built with React, Node.js, Express.js, Socket.io, and MongoDB. This platform enables multiple users to collaborate on coding projects in real-time, providing features such as synchronized code editing, group chat, to-do lists, notifications, and more.
 
-"code-collab" is a collaborative coding web application designed to facilitate real-time code editing and communication among multiple users in shared rooms. Built using React, Node.js, Express.js, Socket.io, and MongoDB, the project incorporates various features such as user authentication, room management, synchronized code editor, group chat, to-do lists, notifications, and more.
+### Features
+User Authentication: Signup and login functionality for secure access.
+Room Management: Enter existing rooms or generate new roomIds for collaboration.
+Real-time Code Editor: Synchronized code editing for seamless collaboration.
+Group Chat: Communicate with other users in real-time through a group chat.
+To-do Web App: Manage and prioritize tasks with a collaborative to-do list.
+Notifications: On-screen notifications for important events.
+
+### Tech Stack
+- Frontend:
+  - React
+  - Socket.io-client
+- Backend:
+  - Node.js
+  - Express.js
+  - Socket.io
+  - MongoDB
+
+## Getting Started
+- Clone the repository: git clone https://github.com/Synchrotek/
+- Navigate to the project directory: cd code-collab
+- Install dependencies: npm install (both in the root directory and client directory)
+- Set up MongoDB and configure the connection in the server's .env file.
+- Run the development server: npm run dev
+  
+## Usage
+- Visit the signup page and create an account.
+- Log in with your credentials.
+- Enter an existing room or generate a new one.
+- Collaborate with other users using the real-time code editor and communication features.
+  
+## Contributing
+- contributions are welcome! Let's expore what a wonderful site we can build together.

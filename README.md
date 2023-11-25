@@ -24,7 +24,7 @@ A collaborative coding web application built with React, Node.js, Express.js, So
 - Navigate to the project directory: cd CollabCode
 - Install dependencies: npm install (both in the root directory and client directory)
 - Set up MongoDB and configure the connection in the server's .env file.
-- In .env file add 
+- Create .env in CollabCode directory and add :
   ```
   VITE_ENDPOINT={Your-backend-server-URL}
   MONGO_URI={Your-mongodbDrivers-connection-string}

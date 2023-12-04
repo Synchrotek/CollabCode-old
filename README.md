@@ -25,7 +25,6 @@ A collaborative coding web application built with React, Node.js, Express.js, So
 - Run the Backend development server: npm run server:dev
   
 ### Tech Stack 
----
 Backend | Frontend 
 | :--- | :--- 
 Node.js | React

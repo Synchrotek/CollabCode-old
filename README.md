@@ -1,4 +1,4 @@
-### code-collab
+### CollabCode
 A collaborative coding web application built with React, Node.js, Express.js, Socket.io, and MongoDB. This platform enables multiple users to collaborate on coding projects in real-time, providing features such as synchronized code editing, group chat, to-do lists, notifications, and more.
 
 ### Features
@@ -26,9 +26,9 @@ A collaborative coding web application built with React, Node.js, Express.js, So
 - Set up MongoDB and configure the connection in the server's .env file.
 - Create .env in CollabCode directory and add :
   ```
-  VITE_ENDPOINT={Your-backend-server-URL}
-  MONGO_URI={Your-mongodbDrivers-connection-string}
-  JWT_SECRET={Your-JWTSecretSting}
+  VITE_ENDPOINT=Your_backend_server_URL
+  MONGO_URI=Your_mongodbDrivers_connection_string
+  JWT_SECRET=Your_JWTSecretSting
   ```
 - Run the Frontend development server: npm run dev
 - Run the Backend development server: npm run server:dev

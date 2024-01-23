@@ -31,6 +31,7 @@ Node.js | React
 Express.js | Socket.io-client
 Socket.io
 MongoDB
+Chakra UI
 
 ## Usage
 - Visit the signup page and create an account.

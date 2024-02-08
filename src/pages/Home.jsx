@@ -68,7 +68,7 @@ const Home = () => {
         >Log Out</button>
       </div>
       <footer>
-        <h4>Built with 💛 by <a href='http://github.com'>ByteAstro</a></h4>
+        <h4>Built with 💛 by <a href='http://github.com/Synchrotek'>Synchrotek</a></h4>
       </footer>
     </div>
   )

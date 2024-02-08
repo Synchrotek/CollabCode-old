@@ -24,6 +24,7 @@ const userSocketMap = {};
 
 app.get('/', (req, res) => {
     res.send("API is running ");
+    console.log("Server running well");
 })
 
 app.use('/api/user', userRouter)
